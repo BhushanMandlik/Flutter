@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Widget is return type & In Flutter everything is widget
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalog App"),

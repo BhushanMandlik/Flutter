@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'pages/home_page.dart';
+import 'pages/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,6 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //Widget is return type & In Flutter everything is widget
     /*int days = 30;
     String name = "Google";
     double pi = 3.14;
@@ -19,7 +21,20 @@ class MyApp extends StatelessWidget {
     //final*/
 
     return MaterialApp(
-      home: HomePage(),
+      //home: HomePage(),
+      //themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      //initialRoute: "/home",
+      /*routes: {
+        "/": (context) => new LoginPage(), //new is optional
+        // class name follows camelcase and function name follows eg. buildApp
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+      },*/
     );
   }
 }
