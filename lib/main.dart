@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
+
+      //debugShowCheckedModeBanner: false, //use to remove debug banner (debug banner shows the app in production)
+
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
@@ -36,8 +40,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => new LoginPage(), //new is optional
         // class name follows camelcase and function name follows eg. buildApp
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
